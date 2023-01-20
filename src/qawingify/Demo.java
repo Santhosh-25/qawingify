@@ -19,6 +19,10 @@ public class Demo {
 		//Launching the given URL
 		driver.get("https://sakshingp.github.io/assignment/login.html");
 		
+		//To check no of images in login page
+		List<WebElement> img = driver.findElements(By.tagName("img"));
+		System.out.println("No of images: " +img.size());
+		
 		//Give inputs to get login
 		//Note:- Any value of user name/password is valid to log in the application
 		driver.findElement(By.id("username")).sendKeys("santhoshmahii25@gmail.com");
